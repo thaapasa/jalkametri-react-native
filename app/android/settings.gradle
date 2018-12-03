@@ -1,3 +1,3 @@
-rootProject.name = 'jAlkaMetri'
+rootProject.name = 'jalkametri'
 
 include ':app'
