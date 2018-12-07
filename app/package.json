@@ -4,16 +4,23 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
+    "reset-cache": "node node_modules/react-native/local-cli/cli.js start --reset-cache",
+    "clean-js": "watchman watch-del-all",
+    "clean-build": "rf -rf build/ ios/build/ android/build/ android/app/build/",
+    "clean": "yarn clean-js && yarn clean-build",
     "test": "jest",
     "lint": "tslint --project ."
   },
   "dependencies": {
     "react": "16.6.1",
-    "react-native": "0.57.7"
+    "react-native": "0.57.7",
+    "react-native-knex": "0.14.5",
+    "react-native-sqlite-storage": "3.3.8"
   },
   "devDependencies": {
     "@types/react": "16.7.12",
     "@types/react-native": "0.57.17",
+    "@types/react-native-sqlite-storage": "3.3.1",
     "babel-jest": "23.6.0",
     "jest": "23.6.0",
     "metro-react-native-babel-preset": "0.50.0",
